@@ -1,16 +1,21 @@
+@font-face { font-family: CoolFont; src: url("fonts/MS\ Sans\ Serif\ 8pt.ttf"); } 
+
 * {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: CoolFont;
   padding: 0;
   margin: 0;
+  text-shadow: 0.1px 0px rgb(185, 185, 185), 1px 0px rgb(185, 185, 185);
+  color: transparent; letter-spacing: 1px;
+  color: black;
 }
 
-header a img {
-  border: solid 5px black;
-}
 
 header {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;  
+  text-align: center;
 }
 
 nav {
@@ -23,7 +28,43 @@ nav ul {
   align-items: center;
   justify-content: space-around;  
   text-align: center;
-  
+  list-style: none;
+  background-color: rgb(2, 2, 71);
+  border: solid 2px #808080;
+  align-items: stretch;
+  padding: 0; 
+  margin: 0;
+  border:0;
+}
+ul li {
+  display: inline-block;
+  background-color: #a0a0a4;
+}
+ul li:hover {
+  background: rgb(197, 196, 196);
+}
+
+li a{
+  text-decoration: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+  width:100%;
+}
+ul li {
+  width:100%;
+  border: solid 2px rgb(83, 83, 83);
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+li a:hover{
+  color:rgb(238, 27, 203);
+}
+a img {
+  padding:2px;
 }
 
 .app-container {

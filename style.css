@@ -35,12 +35,16 @@ ul li {
   background-color: #a0a0a4;
   /* width: 15%; */
   border: 0;
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 2px rgb(29, 29, 29),
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 ul li:hover {
   background: rgb(197, 196, 196);
 }
 
-li a{
+li button{
   text-decoration: none;
   display:flex;
   align-items: center;
@@ -49,8 +53,32 @@ li a{
   width:100%;
   /* padding: 5px; */
   flex: 1;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 13px;
 }
+
+#rainbow-text {
+  animation: colorRotate 10s linear 0s infinite;
+  font-weight: bolder;
+}
+@keyframes colorRotate {
+  from {
+    color: #3131e6;
+  }
+  10% {
+    color: #1f2bdb;
+  }
+  50% {
+    color: #fd2146;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #3131e6;
+  }
+}
+
 ul li {
   /* width:10%; */
   /* border: solid 3px rgb(83, 83, 83); */
@@ -60,10 +88,12 @@ ul li {
   display: flex;
 
 }
-li a:hover{
-  color:rgb(238, 27, 203);
+
+li button:hover{
+  color:rgb(238, 27, 203) !important;
 }
-a img {
+
+button img {
   padding:2px;
 }
 
@@ -79,6 +109,12 @@ a img {
 .title-container {
   width: 100vh;
   /* margin-top: 300px; */
+}
+.home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 

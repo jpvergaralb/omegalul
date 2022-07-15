@@ -9,7 +9,7 @@ const snakeButton = document.querySelector(".snake-button")
 const aboutButton = document.querySelector(".about-button")
 
 githubButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/"
+  const link = "/#/"
   window.location = link
 })
 
@@ -24,7 +24,7 @@ catsButton.addEventListener("click", () => {
 })
 
 snakeButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/views/snake.html"
+  const link = "/#/views/snake.html"
   window.location = link
 })
 

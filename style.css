@@ -54,7 +54,8 @@ li a{
 }
 ul li {
   width:100%;
-  border: solid 2px rgb(83, 83, 83);
+  /* border: solid 3px rgb(83, 83, 83); */
+  border: solid 3px rgb(0, 0, 68);
   padding: 0;
   margin: 0;
   display: flex;
@@ -80,12 +81,75 @@ a img {
   width: 100vh;
   /* margin-top: 300px; */
 }
-.title-container marquee {
-  background-color: white;
-}
+
 
 
 body, html {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,15,250,1) 0%, rgba(0,212,255,1) 100%);
 }
+
+ /* <!-- Testing --> */
+ #post{
+  background: #C0C0C0;
+  margin: auto;
+  width: 300px;
+  height: auto;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+
+#pnav{
+  margin: 2px 0px 0px 2px;
+  background-color: #00007f;
+  width: 98%;
+  height: 16px;
+  color: #FFFFFF;
+  padding: 0px 0px 2px 2px;
+}
+
+.pbuttons{
+  float: right;
+  padding: 2px 2px 2px 0px;
+}
+
+#content{
+  width: 97%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 0%;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+}
+
+#noter{
+  margin: 0% 1% 1% 1%;
+  width: auto;
+  background: #C0C0C0;
+  
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.notebox{  
+  flex-grow: 1;
+  margin: auto;
+  width: auto;
+  padding-left: 2px;
+  padding-right: 0px;
+  color: #000000;
+  border-top: 1px solid #929292;
+  border-left: 1px solid #929292;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+}
+/* Testing */

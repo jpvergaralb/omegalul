@@ -1,4 +1,3 @@
-
 // Buttons
 const closeButton = document.querySelector(".close-button")
 const homeButton = document.querySelector(".home-button")
@@ -51,3 +50,21 @@ homeButton.addEventListener("click", () => {
 // const targetElement = document.querySelector("#ghost")
 // new cursoreffects.ghostCursor({element: targetElement});
 // new cursoreffects.springyEmojiCursor({emoji: "🤷‍♂️"});
+
+// Time
+const timeNumber = document.querySelector("#random-number")
+const currentTime = document.querySelector("#current-time")
+const updateTime = () => {
+  timeNumber.textContent++
+  timeNumber.setAttribute("value", timeNumber.textContent)
+  const now = new Date();
+  if (now.getMinutes()<10){
+    const currentHours = now.getHours() + ':' + "0" + now.getMinutes();
+    currentTime.textContent = currentHours; return;
+  } else {
+    const currentHours = now.getHours() + ':' + now.getMinutes();
+    currentTime.textContent = currentHours; return;
+  }
+  
+}
+setInterval(updateTime, 1000)

@@ -13,10 +13,11 @@
   </head>
 
   <body>
-    <!-- <header> -->
+
         <nav>
           <div class="title-bar">
           <a class="home-button"> <img src="assets/img_cat_8.png " width="30px"> </a> 
+          <p id="current-time">  </p>
           <ul>
             <li> <button href="https://www.google.com" class="github-button"> <img src="assets/gif_github.gif" width="20px"> <p id="rainbow-text"> Github </p> </button> </li>
             <li> <button href="https://www.google.com" class="spotify-button"> <img src="assets/gif_music_1.gif" width="32px"> <p id="rainbow-text"> Spotify </p>  </button> </li>
@@ -24,17 +25,69 @@
             <li> <button href="http://localhost:8000/views/snake.html" class="snake-button"> <img src="assets/gif_snake_4.gif" width="36px"> <p id="rainbow-text"> Snake </p></button> </li>
             <li> <button href="http://localhost:8000/views/about.html" class="about-button"> <img src="assets/gif_nice.gif" width="46px">  <p id="rainbow-text"> About </p>  </button> </li>
           </ul>
+          <!-- <p id="current-time">  </p> -->
           <div class="title-bar-controls">
             <button aria-label="Close" class="close-button"></button>
           </div>
         </div>
+        <div class="title-container" id="main-welcome"> 
+            <marquee> <img src="assets/gif_cat_2.gif"> Welcome <img src="assets/gif_cat_2.gif"> </marquee> 
+        </div>
         </nav>
         
-    <!-- </header> -->
 
     <div class="app-container">
-      <div class="title-container"> 
-        <marquee > Welcome </marquee>
+      <div class="index-left-side">
+        <div class="window" style="width: 300px">
+          <div class="title-bar">
+            <div class="title-bar-text" id="music-box-title"> any ideas??</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <p>idk what i'll put here</p>
+            <h3 id="random-number" value="420"> 420 </h3>
+          </div>
+        </div>
+      </div>
+      <div class="index-right-side"> 
+        <div class="window" style="width: 300px">
+          <div class="title-bar">
+            <div class="title-bar-text" id="music-box-title"> good ??</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <p>enjoy a little musik</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0HQZ5FM50t5rxlkJ2ANaFt?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </div>
+
+        <div class="window" style="width: 300px">
+          <div class="title-bar">
+            <div class="title-bar-text" id="music-box-title"> placeholder</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in libero leo. Praesent ultrices ullamcorper tellus, non auctor nulla convallis ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum quam felis, ac ullamcorper urna pretium sit amet. Donec bibendum ornare mi ut accumsan. Nulla nisi augue, eleifend sed tempor quis, volutpat id magna. Nullam sodales justo finibus consequat rutrum. Integer magna lectus, dignissim et sagittis eget, aliquam eget eros. Aenean sed dignissim nulla. Nullam ut diam id libero mollis vestibulum eget vitae urna. Ut pretium diam nibh, sit amet tincidunt dui commodo viverra.
+
+              Quisque ullamcorper, urna ut commodo convallis, enim elit varius magna, vitae eleifend odio lacus sed nibh. Maecenas lobortis in mi quis egestas. Integer venenatis mattis diam, ut lacinia felis commodo vel. Integer hendrerit, sapien et pellentesque fermentum, urna neque sagittis nunc, quis accumsan libero sapien id erat. Quisque vitae ipsum vitae orci scelerisque auctor at sed ex. Suspendisse congue nibh et lectus vehicula, sed rhoncus massa ornare. Duis dui ipsum, scelerisque sed pulvinar at, scelerisque nec metus. In mi mauris, blandit eget malesuada quis, vulputate non erat. Duis venenatis nulla eu sapien tincidunt maximus. Sed ornare ante eget mauris dignissim viverra. Integer ut nulla a arcu faucibus egestas ac at lorem. Aenean vitae libero nulla.
+              
+              Donec a urna tristique nulla sollicitudin facilisis quis id nisl. Nam eleifend lectus ac blandit vehicula. Morbi egestas velit diam, sit amet egestas felis venenatis non. Nulla auctor feugiat ligula sed vestibulum. Suspendisse iaculis at risus a pretium. Sed a nisl quis neque venenatis facilisis. Nam vitae mollis tellus, non pulvinar lectus.</p>
+            
+          </div>
+        </div>
+      
       </div>
     </div>
 

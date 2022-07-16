@@ -1,15 +1,16 @@
 Oldschool landing page
-Lots of gifs
-Visitor counter
-Maybe landing page for a skii game, or maybe snake for simplicity
-
+[ ] Lots of gifs
+[ ] Visitor counter [working on this]
+[ ] Snake
 I want this page to be 2 columns, with random info
-	> Weather
-	> Random youtube video
-	> Crypto prices
-	> Random api info
-	> Many many gifs
-	> Ads
-	> Guess the flag with some api
+	> [ ] Weather [x -> api]
+	> [ ] Random youtube video [
+	> [ ] Crypto prices [x -> api]
+	> [ ] Random api info [cat info]
+	> [ ] Many many gifs 
+	> [ ] Ads
+	> [ ] Guess the flag with some api
+	> [ ] Random tf2 reference
 
-The rebblogers window should be on about
+[ ] Maybe add sessions
+[x] The rebblogers window should be on about

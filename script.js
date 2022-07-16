@@ -73,3 +73,14 @@ const updateTime = () => {
   
 }
 setInterval(updateTime, 1000)
+
+
+// Trying to get visitor count
+const visitorText = document.querySelector("#visitor-number")
+window.addEventListener("load", () => {
+  console.log("page fully loaded")
+  handleVisits()
+  const visitorCount = localStorage.getItem("visitorCount")
+  visitorText.textContent = "#" + visitorCount
+  console.log("count" + visitorCount, "text" + visitorText)
+})

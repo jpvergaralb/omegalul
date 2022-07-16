@@ -53,10 +53,15 @@ homeButton.addEventListener("click", () => {
 
 // Time
 const timeNumber = document.querySelector("#random-number")
-const currentTime = document.querySelector("#current-time")
+const currentTime = document.querySelector(".current-time")
 const updateTime = () => {
-  timeNumber.textContent++
-  timeNumber.setAttribute("value", timeNumber.textContent)
+  try {
+    timeNumber.textContent++
+    timeNumber.setAttribute("value", timeNumber.textContent)
+  }
+  catch(error){
+    // console.log(error)
+  }
   const now = new Date();
   if (now.getMinutes()<10){
     const currentHours = now.getHours() + ':' + "0" + now.getMinutes();

@@ -34,7 +34,7 @@ aboutButton.addEventListener("click", () => {
 })
 
 closeButton.addEventListener("click", () => {
-  const link = "https://www.youtube.com/watch?v=ncWgoD2MDnQ"
+  const link = "https://www.youtube.com/watch?v=DFB4Iw7BHoU"
   window.location = link
 })
 homeButton.addEventListener("click", () => {
@@ -42,4 +42,12 @@ homeButton.addEventListener("click", () => {
   window.location = link
 })
 
-// Buttons
+// Cursor: https://github.com/tholman/cursor-effects
+// new cursoreffects.rainbowCursor({length: 30, colors: ['magenta', 'red', 'purple', 'blue'], size: 4});
+// new cursoreffects.fairyDustCursor({colors: ["#3131e6", "#1f2bdb", "#fd2146", "#ff3399", "#3131e6"]});
+// new cursoreffects.fairyDustCursor({colors: ["purple"]});
+// new cursoreffects.snowflakeCursor({colors: ["purple"]})
+// new cursoreffects.trailingCursor({particles: 150});
+// const targetElement = document.querySelector("#ghost")
+// new cursoreffects.ghostCursor({element: targetElement});
+// new cursoreffects.springyEmojiCursor({emoji: "🤷‍♂️"});

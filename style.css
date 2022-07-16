@@ -236,3 +236,7 @@ body, html {
   padding: 0;
   width: 100%;
 }
+#main-welcome marquee a {
+  animation: colorRotate 3s linear 0s infinite;
+  font-weight: bolder;
+}

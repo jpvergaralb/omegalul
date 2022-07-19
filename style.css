@@ -288,3 +288,15 @@ body, html {
   font-size: 4em;
   font-weight: bolder;
 }
+
+/* Country */
+.result-container-2 {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.result-container-2 p {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom:5px;
+}

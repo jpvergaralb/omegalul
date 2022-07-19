@@ -1,4 +1,5 @@
 const resultContainer = document.querySelector(".result-container")
+const resultContainer2 = document.querySelector(".result-container-2")
 
 const bitcoinPrice = document.querySelector(".shitcoin-price")
 const lastDayPerformance = document.querySelector(".last-day-performance")
@@ -23,11 +24,24 @@ const handleGecko = (response) => {
   const btc = response[0] //if this no longer represents btc --> omegalul
   const price = btc.current_price
   const from_ath = Math.round(btc.ath_change_percentage)
-  console.log(response)
   bitcoinPrice.textContent = "$"+price
   fromAth.textContent = from_ath+"% from ath"
   const lastDay = Math.round(btc.price_change_percentage_24h)
   lastDayPerformance.textContent = lastDay+"% in the last 24hrs"
+}
+
+const handleCountryName = (response) => {
+  const randomNumber = Math.round(Math.random() * (response.length))
+  const country = response[randomNumber]
+  const countryName = country.name.official
+  const countryImg = country.flags.png
+
+  const countryElementName = document.createElement("p")
+  const countryElementImage = document.createElement("img")
+
+  resultContainer2.append(countryElementName); resultContainer2.append(countryElementImage);
+  countryElementName.textContent = countryName; countryElementImage.setAttribute("src", countryImg)
+  console.log(countryImg)
 }
 
 // ----------- > Apis
@@ -52,8 +66,19 @@ const coinGecko = () => {
   
 }
 
+const countryNames = () => {
+  const response = fetch(`https://restcountries.com/v3.1/all`)
+  .then(response => response.json())
+  .then(responseJSON => handleCountryName(responseJSON))
+  .catch(error => {console.log(error)})
+}
+
 window.onload = () => {
   catImgAPI()
   catFactAPI()
   coinGecko()
+  countryNames()
 }
+
+
+

@@ -79,19 +79,21 @@ window.addEventListener("load", () => {
 
 
 // Free bitcoin
+try {
 const freeBitcoinGif = document.querySelector(".free-bitcoin")
 freeBitcoinGif.addEventListener("click", () => {
   const link = "https://99bitcoins.com/bitcoin-obituaries/"
   window.location = link
-})
+})} catch(error){console.log(error)}
 
 // Check country guess
 const guessButton = document.getElementById("country-submit")
 const countryAnswer = document.getElementById("country-answer")
 
+try{
 guessButton.addEventListener("click", () => {
   handleCountryGuess(countryAnswer.value)
-})
+})} catch(error){console.log(error)}
 
 document.addEventListener("keydown", (e) => {
   if (e.key == "Enter"){

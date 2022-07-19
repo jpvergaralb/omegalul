@@ -130,11 +130,10 @@ button img {
   justify-content: center;
 }
 
-.footer {
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
-}
+/* Footer :https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b */
+footer{min-height:50px;}
+body{display:flex; flex-direction:column;}
+footer{margin-top:auto;}
 
 
 body, html {

@@ -6,7 +6,7 @@ const snakeButton = document.querySelector(".snake-button")
 const aboutButton = document.querySelector(".about-button")
 
 githubButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/"
+  const link = "https://github.com/jpvergaralb  "
   window.location = link
 })
 
@@ -77,4 +77,12 @@ window.addEventListener("load", () => {
       // lul do nothing
       console.log(error)
   }
+})
+
+
+// Free bitcoin
+const freeBitcoinGif = document.querySelector(".free-bitcoin")
+freeBitcoinGif.addEventListener("click", () => {
+  const link = "https://99bitcoins.com/bitcoin-obituaries/"
+  window.location = link
 })

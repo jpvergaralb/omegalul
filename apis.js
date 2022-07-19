@@ -84,4 +84,5 @@ window.onload = () => {
 }
 
 
-
+// 1920x1080 random cats
+// https://loremflickr.com/1920/1080

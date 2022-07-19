@@ -33,16 +33,19 @@ const handleGecko = (response) => {
 const handleCountryName = (response) => {
   const randomNumber = Math.round(Math.random() * (response.length))
   const country = response[randomNumber]
-  const countryName = country.name.official
+  const countryName = country.name.common
   const countryImg = country.flags.png
 
   const countryElementName = document.createElement("p")
   const countryElementImage = document.createElement("img")
-
   resultContainer2.append(countryElementName); resultContainer2.append(countryElementImage);
   countryElementName.textContent = countryName; countryElementImage.setAttribute("src", countryImg)
-  console.log(countryImg)
+
+  countryInfo = JSON.stringify(country)
+  localStorage.setItem("countryInfoJson", countryInfo)
 }
+
+
 
 // ----------- > Apis
 const catImgAPI = () => {

@@ -68,11 +68,9 @@ setInterval(updateTime, 1000)
 const visitorText = document.querySelector("#visitor-number")
 window.addEventListener("load", () => {
   try {  
-    console.log("page fully loaded")
     handleVisits()
     const visitorCount = localStorage.getItem("visitorCount")
     visitorText.textContent = "#" + visitorCount
-    console.log("count" + visitorCount, "text" + visitorText)
   } catch(error){
       // lul do nothing
       console.log(error)
@@ -86,3 +84,27 @@ freeBitcoinGif.addEventListener("click", () => {
   const link = "https://99bitcoins.com/bitcoin-obituaries/"
   window.location = link
 })
+
+// Check country guess
+const guessButton = document.getElementById("country-submit")
+const countryAnswer = document.getElementById("country-answer")
+
+guessButton.addEventListener("click", () => {
+  handleCountryGuess(countryAnswer.value)
+})
+
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter"){
+    handleCountryGuess(countryAnswer.value)
+  }
+})
+
+const handleCountryGuess = (guess) => {
+  const countryInfoRetrieved = localStorage.getItem("countryInfoJson")
+  const countryInfo = JSON.parse(countryInfoRetrieved)
+  const countryName = countryInfo.name.common
+  console.log(countryInfo)
+  if (countryName.toLowerCase() == guess.toLowerCase()){
+    console.log("correct")
+  } else {console.log("incorrect")}
+}

@@ -4,7 +4,7 @@ const handleVisits = () => {
     let visitorCountInt =  parseInt(visitorCount)
     visitorCountInt++
     localStorage.setItem("visitorCount", visitorCountInt.toString())
-    console.log(visitorCount); return;
+    return;
   }
   else {
     const initialCount = "1";

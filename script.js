@@ -2,22 +2,10 @@
 const closeButton = document.querySelector(".close-button")
 const homeButton = document.querySelector(".home-button")
 const githubButton = document.querySelector(".github-button")
-const spotifyButton = document.querySelector(".spotify-button")
-const catsButton = document.querySelector(".cats-button")
 const snakeButton = document.querySelector(".snake-button")
 const aboutButton = document.querySelector(".about-button")
 
 githubButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/"
-  window.location = link
-})
-
-spotifyButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/"
-  window.location = link
-})
-
-catsButton.addEventListener("click", () => {
   const link = "http://localhost:8000/"
   window.location = link
 })
@@ -41,12 +29,13 @@ homeButton.addEventListener("click", () => {
   window.location = link
 })
 
+
 // Cursor: https://github.com/tholman/cursor-effects
-// new cursoreffects.rainbowCursor({length: 30, colors: ['magenta', 'red', 'purple', 'blue'], size: 4});
+new cursoreffects.rainbowCursor({length: 30, colors: ['red', 'orange', 'yellow', 'green', 'cyan', 'blue'], size: 3});
 // new cursoreffects.fairyDustCursor({colors: ["#3131e6", "#1f2bdb", "#fd2146", "#ff3399", "#3131e6"]});
 // new cursoreffects.fairyDustCursor({colors: ["purple"]});
 // new cursoreffects.snowflakeCursor({colors: ["purple"]})
-// new cursoreffects.trailingCursor({particles: 150});
+// new cursoreffects.trailingCursor({particles: 15});
 // const targetElement = document.querySelector("#ghost")
 // new cursoreffects.ghostCursor({element: targetElement});
 // new cursoreffects.springyEmojiCursor({emoji: "🤷‍♂️"});
@@ -78,9 +67,14 @@ setInterval(updateTime, 1000)
 // Trying to get visitor count
 const visitorText = document.querySelector("#visitor-number")
 window.addEventListener("load", () => {
-  console.log("page fully loaded")
-  handleVisits()
-  const visitorCount = localStorage.getItem("visitorCount")
-  visitorText.textContent = "#" + visitorCount
-  console.log("count" + visitorCount, "text" + visitorText)
+  try {  
+    console.log("page fully loaded")
+    handleVisits()
+    const visitorCount = localStorage.getItem("visitorCount")
+    visitorText.textContent = "#" + visitorCount
+    console.log("count" + visitorCount, "text" + visitorText)
+  } catch(error){
+      // lul do nothing
+      console.log(error)
+  }
 })

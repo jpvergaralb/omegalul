@@ -115,6 +115,11 @@ button img {
   align-items: center;
 }
 
+.index-left-side > *, .index-right-side > * {
+  margin-bottom: 10px;
+  color:red;
+}
+
 
 .home-button {
   display: flex;
@@ -122,6 +127,7 @@ button img {
   align-items: center;
   justify-content: center;
 }
+
 
 
 
@@ -143,7 +149,7 @@ body, html {
   margin: 0;
   border: 0;
 }
-.title-bar > p {
+.title-bar p {
   padding: 0;
   margin: 0;
   border: 0;
@@ -239,4 +245,13 @@ body, html {
 #main-welcome marquee a {
   animation: colorRotate 3s linear 0s infinite;
   font-weight: bolder;
+}
+
+/* Apis responses - Cats */
+.result-container {
+  display: flex;
+  flex-direction: column;
+} 
+.result-container > * {
+  margin-bottom: 5px;
 }

@@ -20,8 +20,7 @@
           <p class="current-time">  </p>
           <ul>
             <li> <button href="https://www.google.com" class="github-button"> <img src="assets/gif_github.gif" width="20px"> <p id="rainbow-text"> Github </p> </button> </li>
-            <li> <button href="https://www.google.com" class="spotify-button"> <img src="assets/gif_music_1.gif" width="32px"> <p id="rainbow-text"> Spotify </p>  </button> </li>
-            <li> <button href="https://www.google.com" class="cats-button"> <img src="assets/gif_cat_4.gif" width="26px"> <p id="rainbow-text"> Cat </p>  </button> </li>
+            <!-- <li> <button href="https://www.google.com" class="cats-button"> <img src="assets/gif_cat_4.gif" width="26px"> <p id="rainbow-text"> Cat </p>  </button> </li> -->
             <li> <button href="http://localhost:8000/views/snake.html" class="snake-button"> <img src="assets/gif_snake_4.gif" width="36px"> <p id="rainbow-text"> Snake </p></button> </li>
             <li> <button href="http://localhost:8000/views/about.html" class="about-button"> <img src="assets/gif_nice.gif" width="46px">  <p id="rainbow-text"> About </p>  </button> </li>
           </ul>
@@ -31,7 +30,7 @@
           </div>
         </div>
         <div class="title-container" id="main-welcome"> 
-            <marquee> <img src="assets/gif_cat_2.gif"> Welcome visitor <a id="visitor-number"> #100 </a> <img src="assets/gif_cat_2.gif"> </marquee> 
+            <marquee scrollamount="20"> <img src="assets/gif_cat_2.gif"> Welcome visitor <a id="visitor-number"> </a> <img src="assets/gif_cat_2.gif"> </marquee> 
         </div>
         </nav>
         
@@ -40,7 +39,7 @@
       <div class="index-left-side">
         <div class="window" style="width: 300px">
           <div class="title-bar">
-            <div class="title-bar-text" id="music-box-title"> any ideas??</div>
+            <div class="title-bar-text" id="music-box-title"> <img src="assets/gif_misc_1.gif" width="60px"> any ideas??</div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
@@ -48,16 +47,14 @@
             </div>
           </div>
           <div class="window-body">
-            <p>idk what i'll put here</p>
+            <p>idk what to put here</p>
             <h3 id="random-number" value="420"> 420 </h3>
           </div>
         </div>
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Never forget this could be any of your alts at any time. <a href="https://t.co/c1eE0Or1Wa">pic.twitter.com/c1eE0Or1Wa</a></p>&mdash; Cold Blooded Shiller (@ColdBloodShill) <a href="https://twitter.com/ColdBloodShill/status/1489054751551590405?ref_src=twsrc%5Etfw">February 3, 2022</a></blockquote>
-      </div>
-      <div class="index-right-side"> 
+
         <div class="window" style="width: 300px">
           <div class="title-bar">
-            <div class="title-bar-text" id="music-box-title"> good ??</div>
+            <div class="title-bar-text" id="music-box-title"> <img src="assets/gif_cat_4.gif" width="20px"> <img src="assets/gif_cat_4.gif" width="20px">  <img src="assets/gif_cat_4.gif" width="20px">  </div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
@@ -65,11 +62,12 @@
             </div>
           </div>
           <div class="window-body">
-            <p>enjoy a little musik</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0HQZ5FM50t5rxlkJ2ANaFt?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <div class="result-container"> </div>
           </div>
         </div>
-
+        
+      </div>
+      <div class="index-right-side">  
         <div class="window" style="width: 300px">
           <div class="title-bar">
             <div class="title-bar-text" id="music-box-title"> placeholder</div>
@@ -91,7 +89,7 @@
       
       </div>
     </div>
-
+    <script src="apis.js" async defer></script>
     <script src="visitors.js" async defer></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>

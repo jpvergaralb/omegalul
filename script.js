@@ -96,9 +96,13 @@ document.addEventListener("keydown", (e) => {
 
 // Guesss
 // if (!bestStreak > 0){ localStorage.setItem("best-streak", "0"); console.log("entre aca") }
-if (isNaN(bestStreak)){
-  localStorage.setItem("best-streak", "0");
+const letssee = localStorage.getItem("best-streak")
+if (letssee > 0){
+  console.log('letsee')
+} else {
+    localStorage.setItem("best-streak", "0");
 }
+
 const countryElementName = document.querySelector("#country-element-name")
 const messageFeedback = document.querySelector("#message-feedback")
 const countryGuessAnswer = document.querySelector("#country-answer")

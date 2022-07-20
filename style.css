@@ -279,6 +279,7 @@ body, html {
 .window-body, .window {
   display: flex;
   flex-direction: column;
+  justify-items: flex-start;
 }
 
 .title-bar-text {
@@ -304,3 +305,19 @@ body, html {
   font-weight: bolder;
   margin-bottom:5px;
 }
+
+#guess-last-row p {
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+#message-streak{
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+  padding: 5px;
+  font-size: 1.8em;
+  font-weight: medium;
+}
+

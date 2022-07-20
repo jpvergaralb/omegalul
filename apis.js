@@ -23,11 +23,13 @@ const handleFact = (response) => {
 const handleGecko = (response) => {
   const btc = response[0] //if this no longer represents btc --> omegalul
   const price = btc.current_price
-  const from_ath = Math.round(btc.ath_change_percentage)
+  const from_ath = btc.ath_change_percentage.toFixed(2)
   bitcoinPrice.textContent = "$"+price
   fromAth.textContent = from_ath+"% from ath"
-  const lastDay = Math.round(btc.price_change_percentage_24h)
-  lastDayPerformance.textContent = lastDay+"% in the last 24hrs"
+  const lastDay = btc.price_change_percentage_24h.toFixed(2)
+  if (lastDay > 0){
+    lastDayPerformance.textContent = "+"+lastDay+"% in the last 24hrs"
+  } else {lastDayPerformance.textContent = lastDay+"% in the last 24hrs"}
 }
 
 const handleCountryName = (response) => {
@@ -36,10 +38,11 @@ const handleCountryName = (response) => {
   const countryName = country.name.common
   const countryImg = country.flags.png
 
-  const countryElementName = document.createElement("p")
-  const countryElementImage = document.createElement("img")
-  resultContainer2.append(countryElementName); resultContainer2.append(countryElementImage);
-  countryElementName.textContent = countryName; countryElementImage.setAttribute("src", countryImg)
+  const countryElementName = document.querySelector("#country-element-name")
+  const countryElementImg= document.querySelector("#country-element-img")
+
+  countryElementImg.setAttribute("src", ""); countryElementName.hidden = true;
+  countryElementName.textContent = countryName; countryElementImg.setAttribute("src", countryImg)
 
   countryInfo = JSON.stringify(country)
   localStorage.setItem("countryInfoJson", countryInfo)

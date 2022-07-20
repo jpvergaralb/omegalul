@@ -21,7 +21,7 @@
           <ul>
             <li> <button class="github-button"> <img src="assets/gif_github.gif" width="20px"> <p id="rainbow-text"> Github </p> </button> </li>
             <!-- <li> <buton href="https://www.google.com" class="cats-button"> <img src="assets/gif_cat_4.gif" width="26px"> <p id="rainbow-text"> Cat </p>  </button> </li> -->
-            <li> <button class="snake-button"> <img src="assets/gif_snake_4.gif" width="36px"> <p id="rainbow-text"> Snake </p></button> </li>
+            <!-- <li> <button class="snake-button"> <img src="assets/gif_snake_4.gif" width="36px"> <p id="rainbow-text"> Snake </p></button> </li> -->
             <li> <button class="about-button"> <img src="assets/gif_nice.gif" width="46px">  <p id="rainbow-text"> About </p>  </button> </li>
           </ul>
           <!-- <p id="current-time">  </p> -->
@@ -109,20 +109,24 @@
 
         <div class="window" style="width: 300px">
           <div class="title-bar">
-            <div class="title-bar-text">guess the country</div>
+            <div class="title-bar-text" id="guess-info">guess the country - best guess: </div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
               <button aria-label="Close"></button>
             </div>
           </div>
-          <div class="window-body">
-            <div class="result-container-2"> </div>
-            <div class="field-row">
-              <button id="country-submit"> answer</button>
-              <input id="country-answer" type="text"/>
-              <!-- <p for="text17"> ekisde </p> -->
+          <div class="window-body" id="guess-window">
+            <div class="result-container-2"> 
+              <p id="country-element-name"></p> 
+              <img id="country-element-img">
             </div>
+            <div class="field-row" id="guess-last-row">
+              <button id="country-submit"> answer</button>
+              <input spellcheck="false" id="country-answer" type="text"/>
+              <p id="message-feedback"> </p>
+            </div>
+            <p id="message-streak"> Current streak: 0</p>
           </div>
         </div>
       </div>

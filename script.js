@@ -2,16 +2,10 @@
 const closeButton = document.querySelector(".close-button")
 const homeButton = document.querySelector(".home-button")
 const githubButton = document.querySelector(".github-button")
-const snakeButton = document.querySelector(".snake-button")
 const aboutButton = document.querySelector(".about-button")
 
 githubButton.addEventListener("click", () => {
   const link = "https://github.com/jpvergaralb  "
-  window.location = link
-})
-
-snakeButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/views/snake.html"
   window.location = link
 })
 
@@ -101,12 +95,61 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+// Guesss
+// if (!bestStreak > 0){ localStorage.setItem("best-streak", "0"); console.log("entre aca") }
+const countryElementName = document.querySelector("#country-element-name")
+const messageFeedback = document.querySelector("#message-feedback")
+const countryGuessAnswer = document.querySelector("#country-answer")
+const streakElement = document.querySelector("#message-streak")
+const guessInfo = document.querySelector("#guess-info")
+var bestStreak = localStorage.getItem("best-streak")
+guessInfo.textContent = "guess the country - best guess: " + bestStreak
+var currentStreak = 0;
+
 const handleCountryGuess = (guess) => {
   const countryInfoRetrieved = localStorage.getItem("countryInfoJson")
   const countryInfo = JSON.parse(countryInfoRetrieved)
   const countryName = countryInfo.name.common
   console.log(countryInfo)
-  if (countryName.toLowerCase() == guess.toLowerCase()){
-    console.log("correct")
-  } else {console.log("incorrect")}
+  countryElementName.hidden = false; 
+  if (countryName.toLowerCase() == guess.toLowerCase()){  
+    messageFeedback.textContent = "correct"; messageFeedback.style.color = "green"; messageFeedback.hidden = false;
+    handleStreak(true)
+  } 
+  else {
+    if (guess.toLowerCase() == "lol"){
+      messageFeedback.textContent = "lol"; messageFeedback.style.color = "black"; messageFeedback.hidden = false;
+    } 
+    else if (guess.toLowerCase() == "idk"){
+      messageFeedback.textContent = "fair enough"; messageFeedback.style.color = "black"; messageFeedback.hidden = false;
+    }  
+    else {
+    messageFeedback.textContent = "incorrect"; messageFeedback.style.color = "red"; messageFeedback.hidden = false;
+    }
+    handleStreak(false)
+  } 
+  setTimeout(() =>  
+  {
+    messageFeedback.hidden = true
+    countryGuessAnswer.value = ''
+  }, 1500)
+  setTimeout(() =>  
+  {
+    countryNames()
+  }, 1000)
+}
+
+const handleStreak = (isItCorrect) => {
+  if (isItCorrect){
+    currentStreak++
+    if (parseInt(bestStreak) <= currentStreak){
+      console.log("entro")
+      localStorage.setItem("best-streak", currentStreak.toString())
+    }
+  } else {
+    currentStreak = 0;
+  }
+  guessInfo.textContent = "guess the country - best guess: " + parseInt(bestStreak)
+  streakElement.textContent = "Current streak: " + currentStreak
+  return
 }

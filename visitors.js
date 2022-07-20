@@ -8,7 +8,9 @@ const handleVisits = () => {
   }
   else {
     const initialCount = "1";
-    localStorage.setItem("visitorCount", initialCount); return;
+    localStorage.setItem("visitorCount", initialCount); 
+    localStorage.setItem("best-streak", "0")
+    return;
   }
 }
 

@@ -10,7 +10,7 @@ githubButton.addEventListener("click", () => {
 })
 
 aboutButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/views/about.html"
+  const link = "https://jpvergaralb.github.io/omegalul/views/about"
   window.location = link
 })
 
@@ -19,7 +19,7 @@ closeButton.addEventListener("click", () => {
   window.location = link
 })
 homeButton.addEventListener("click", () => {
-  const link = "http://localhost:8000/"
+  const link = "https://jpvergaralb.github.io/omegalul"
   window.location = link
 })
 
@@ -116,7 +116,7 @@ const handleCountryGuess = (guess) => {
   const countryInfoRetrieved = localStorage.getItem("countryInfoJson")
   const countryInfo = JSON.parse(countryInfoRetrieved)
   const countryName = countryInfo.name.common
-  console.log(countryInfo)
+  // console.log(countryInfo)
   countryElementName.hidden = false; 
   if (countryName.toLowerCase() == guess.toLowerCase()){  
     messageFeedback.textContent = "correct"; messageFeedback.style.color = "green"; messageFeedback.hidden = false;
@@ -151,7 +151,7 @@ const handleStreak = (isItCorrect) => {
     if (parseInt(bestStreak) <= currentStreak){
       localStorage.setItem("best-streak", currentStreak.toString())
       guessInfo.textContent = "guess the country - best guess: " + parseInt(currentStreak)
-      console.log(bestStreak)
+      // console.log(bestStreak)
     }
   } else {
     currentStreak = 0;

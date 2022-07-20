@@ -43,7 +43,7 @@ const handleCountryName = (response) => {
 
   countryElementImg.setAttribute("src", ""); countryElementName.hidden = true;
   countryElementName.textContent = countryName; countryElementImg.setAttribute("src", countryImg)
-
+  console.log(countryName)
   countryInfo = JSON.stringify(country)
   localStorage.setItem("countryInfoJson", countryInfo)
 }

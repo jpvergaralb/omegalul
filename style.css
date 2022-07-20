@@ -320,4 +320,9 @@ body, html {
   font-size: 1.8em;
   font-weight: medium;
 }
+#guess-info {
+  display:flex;
+  justify-content: flex-start;
+  font-size: 0.9em;
+}
 

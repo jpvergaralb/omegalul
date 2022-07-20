@@ -71,7 +71,6 @@ window.addEventListener("load", () => {
   }
 })
 
-
 // Free bitcoin
 try {
 const freeBitcoinGif = document.querySelector(".free-bitcoin")
@@ -103,7 +102,7 @@ const countryGuessAnswer = document.querySelector("#country-answer")
 const streakElement = document.querySelector("#message-streak")
 const guessInfo = document.querySelector("#guess-info")
 var bestStreak = localStorage.getItem("best-streak")
-guessInfo.textContent = "guess the country - best guess: " + bestStreak
+guessInfo.textContent = "guess the country - best guess: " + parseInt(bestStreak)
 var currentStreak = 0;
 
 const handleCountryGuess = (guess) => {
@@ -143,13 +142,14 @@ const handleStreak = (isItCorrect) => {
   if (isItCorrect){
     currentStreak++
     if (parseInt(bestStreak) <= currentStreak){
-      console.log("entro")
       localStorage.setItem("best-streak", currentStreak.toString())
+      guessInfo.textContent = "guess the country - best guess: " + parseInt(currentStreak)
+      console.log(bestStreak)
     }
   } else {
     currentStreak = 0;
   }
-  guessInfo.textContent = "guess the country - best guess: " + parseInt(bestStreak)
+  
   streakElement.textContent = "Current streak: " + currentStreak
   return
 }
